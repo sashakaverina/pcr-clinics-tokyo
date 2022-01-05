@@ -16,4 +16,10 @@ class ClinicsController < ApplicationController
     end
   end
 
+  private
+
+  def clinic_params
+    params.require(:clinic).permit(:name, :comment, :fee, :time, :test_type, :certificate, :reservation)
+  end
+
 end
